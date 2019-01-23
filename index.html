@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="./index.css">
+
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+    <script src="./semantic/semantic.min.js"></script>
+ 
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <div id="app">
+                    <idea-input></idea-input>
+                    <idea v-for="idea in ideas"
+                          v-bind:idea="idea"
+                          v-bind:key="idea.id" 
+                          v-bind:content="idea.content"                                                     
+                    ></idea>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="./index.js"></script>
+</body>
+</html>
